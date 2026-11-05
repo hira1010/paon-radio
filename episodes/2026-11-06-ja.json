@@ -1,0 +1,251 @@
+{
+ "format": "monoradio/news-1",
+ "date": "2026-11-06",
+ "lang": "ja",
+ "title": "開局！スマホで動く翻訳AIと6Gチップ",
+ "opening": [
+  {
+   "say": "おはようございます、パオンの、エーアイ・科学・テクノロジーチャンネルです。十一月六日、金曜日の朝です。",
+   "show": "おはようございます、パオンのAI・科学・テクノロジーチャンネルです。11月6日金曜日の朝です。"
+  },
+  {
+   "say": "開局第一回は、三本のニュースをお届けします。",
+   "show": "開局第1回は、3本のニュースをお届けします。"
+  }
+ ],
+ "news": [
+  {
+   "label": "PFN、翻訳LLMをオープン公開",
+   "points": [
+    "翻訳特化LLM「PLaMo 3 Translate」をオープンウェイト公開",
+    "0.8B〜31Bの4サイズ、53言語対応",
+    "スマホの中だけでオフライン翻訳も可能"
+   ],
+   "details": [
+    "Preferred Networksが11月5日、翻訳特化型LLM「PLaMo 3 Translate」をHugging Faceでオープンウェイト公開しました。",
+    "パラメータ数は0.8B、2B、8B、31Bの4サイズ。日本語・英語を含む53言語の翻訳に対応します。",
+    "最小モデルはスマートフォンやノートPCの上だけで動くため、ネット接続なしでも翻訳できます。"
+   ],
+   "lines": [
+    {
+     "say": "まずは、ピーエフエヌの翻訳エルエルエムです。",
+     "show": "まずは、PFNの翻訳LLMです。"
+    },
+    {
+     "say": "翻訳に特化した、プラモ・スリー・トランスレートが、オープンウェイトで公開されました。",
+     "show": "翻訳特化の「PLaMo 3 Translate」が、オープンウェイトで公開されました。"
+    },
+    {
+     "say": "いちばん小さいモデルは、スマートフォンの中だけで、ネットなしに翻訳できます。",
+     "show": "一番小さいモデルは、スマートフォンの中だけで、ネットなしに翻訳できます。"
+    }
+   ],
+   "url": "https://www.itmedia.co.jp/aiplus/article/2611/05/2000002900/",
+   "link": {
+    "url": "https://www.itmedia.co.jp/aiplus/article/2611/05/2000002900/",
+    "title": "「世界最高水準」の性能うたう翻訳LLMをオープン化、PFN　0.8～31Bの4サイズ　オンデバイスにも対応",
+    "site": "ITmedia AI＋",
+    "description": "Preferred Networksは、翻訳特化型LLM「PLaMo 3 Translate」をオープンウェイトで公開した。",
+    "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2611/05/2000002900/10011377/2048",
+    "icon": null
+   }
+  },
+  {
+   "label": "OpenAI、「Images 2.6」発表",
+   "points": [
+    "画像生成の速度が50％向上",
+    "GIFアニメーションの生成に対応",
+    "保存した参考画像を別チャットでも再利用"
+   ],
+   "details": [
+    "米OpenAIが11月4日（現地時間）、画像生成AIの新版「ChatGPT Images 2.6」を発表しました。",
+    "新機能としてGIFアニメーションの作成に対応。スケッチからキャラクターを動かすアニメーションも作れます。",
+    "写真を名前付きで保存すると、別のチャットでも再アップロードなしに呼び出せます。"
+   ],
+   "lines": [
+    {
+     "say": "つづいて、オープンエーアイの画像生成です。",
+     "show": "続いて、OpenAIの画像生成です。"
+    },
+    {
+     "say": "新しい、イメージズ・ニーテンロクは、生成が五〇パーセント速くなって、ジフアニメも作れるようになりました。",
+     "show": "新版「Images 2.6」は生成が50％速くなり、GIFアニメも作れるようになりました。"
+    },
+    {
+     "say": "チャットジーピーティーの全プランで、無料プランでも使えます。",
+     "show": "ChatGPTの全プランで、無料プランでも使えます。"
+    }
+   ],
+   "url": "https://www.itmedia.co.jp/news/article/2611/05/2000002894/",
+   "link": {
+    "url": "https://www.itmedia.co.jp/news/article/2611/05/2000002894/",
+    "title": "OpenAI、「Images 2.6」発表　生成速度50％向上、GIFアニメの生成も可能に",
+    "site": "ITmedia NEWS",
+    "description": "OpenAIは、画像生成AIの新版「ChatGPT Images 2.6」を発表した。生成速度の向上やGIFアニメーション作成機能などを追加した。",
+    "image": "https://www.itmedia.co.jp/news/article/ogp/2611/05/2000002894/10011356/2048",
+    "icon": null
+   }
+  },
+  {
+   "label": "6Gへ、テラヘルツ通信チップ",
+   "points": [
+    "シリコンチップで最大100Gbit/sの伝送を実現",
+    "テラヘルツ波を低損失で伝送",
+    "成果は学術誌Advanced Materialsに掲載"
+   ],
+   "details": [
+    "インドのJNCASR（ジャワーハルラール・ネルー先端科学研究センター）の研究チームによる成果です。",
+    "電力分配器の実験では、QAM-32変調を使って100Gbit/sの伝送を達成しました。",
+    "将来の6G通信に向けた、小型で高速なテラヘルツ回路への道筋を示す研究です。"
+   ],
+   "lines": [
+    {
+     "say": "最後は科学のニュース、シックスジーに向けたチップです。",
+     "show": "最後は科学ニュース、6Gに向けたチップです。"
+    },
+    {
+     "say": "インドの研究チームが、テラヘルツ波を使うシリコンチップで、最大で毎秒一〇〇ギガビットの伝送を実現しました。",
+     "show": "インドの研究チームが、テラヘルツ波を使うシリコンチップで、最大100Gbit/sの伝送を実現しました。"
+    },
+    {
+     "say": "将来のシックスジー通信を、小さく、速くする一歩になりそうです。",
+     "show": "将来の6G通信を小さく速くする一歩になりそうです。"
+    }
+   ],
+   "url": "https://ddindia.co.in/2026/11/new-silicon-chip-enables-high-speed-terahertz-data-transmission-could-advance-6g-networks/",
+   "link": {
+    "url": "https://ddindia.co.in/2026/11/new-silicon-chip-enables-high-speed-terahertz-data-transmission-could-advance-6g-networks/",
+    "title": "New silicon chip enables high-speed terahertz data transmission, could advance 6G networks",
+    "site": "DD India",
+    "description": "Researchers at JNCASR have developed a silicon chip capable of transmitting terahertz waves with minimal signal loss, achieving data speeds of up to 100 Gbit/s.",
+    "image": "https://ddindia.co.in/wp-content/uploads/2026/11/Photonic-Tunneling-Infographic-and-Lab-Team.png",
+    "icon": null
+   }
+  }
+ ],
+ "closing": [
+  {
+   "say": "今日の注目は、スマホの中で動く翻訳エーアイでした。データが外に出ない翻訳は、これから増えそうです。",
+   "show": "今日の注目は、スマホの中で動く翻訳AIでした。データが外に出ない翻訳は、これから増えそうです。"
+  },
+  {
+   "say": "以上、パオンの、エーアイ・科学・テクノロジーチャンネルでした。また明日、いってらっしゃい。",
+   "show": "以上、パオンのAI・科学・テクノロジーチャンネルでした。また明日、いってらっしゃい。"
+  }
+ ],
+ "highlight": 0,
+ "seconds": 86.61,
+ "lines_timed": [
+  {
+   "start": 0.6,
+   "end": 10.616,
+   "show": "おはようございます、パオンのAI・科学・テクノロジーチャンネルです。11月6日金曜日の朝です。",
+   "part": 0
+  },
+  {
+   "start": 10.866,
+   "end": 15.015,
+   "show": "開局第1回は、3本のニュースをお届けします。",
+   "part": 0
+  },
+  {
+   "start": 15.265,
+   "end": 18.796,
+   "show": "まずは、PFNの翻訳LLMです。",
+   "part": 1
+  },
+  {
+   "start": 19.046,
+   "end": 26.161,
+   "show": "翻訳特化の「PLaMo 3 Translate」が、オープンウェイトで公開されました。",
+   "part": 1
+  },
+  {
+   "start": 26.411,
+   "end": 32.405,
+   "show": "一番小さいモデルは、スマートフォンの中だけで、ネットなしに翻訳できます。",
+   "part": 1
+  },
+  {
+   "start": 32.655,
+   "end": 36.09,
+   "show": "続いて、OpenAIの画像生成です。",
+   "part": 2
+  },
+  {
+   "start": 36.34,
+   "end": 45.535,
+   "show": "新版「Images 2.6」は生成が50％速くなり、GIFアニメも作れるようになりました。",
+   "part": 2
+  },
+  {
+   "start": 45.785,
+   "end": 50.211,
+   "show": "ChatGPTの全プランで、無料プランでも使えます。",
+   "part": 2
+  },
+  {
+   "start": 50.461,
+   "end": 54.632,
+   "show": "最後は科学ニュース、6Gに向けたチップです。",
+   "part": 3
+  },
+  {
+   "start": 54.882,
+   "end": 63.618,
+   "show": "インドの研究チームが、テラヘルツ波を使うシリコンチップで、最大100Gbit/sの伝送を実現しました。",
+   "part": 3
+  },
+  {
+   "start": 63.868,
+   "end": 69.447,
+   "show": "将来の6G通信を小さく速くする一歩になりそうです。",
+   "part": 3
+  },
+  {
+   "start": 69.697,
+   "end": 78.017,
+   "show": "今日の注目は、スマホの中で動く翻訳AIでした。データが外に出ない翻訳は、これから増えそうです。",
+   "part": 4
+  },
+  {
+   "start": 78.267,
+   "end": 86.608,
+   "show": "以上、パオンのAI・科学・テクノロジーチャンネルでした。また明日、いってらっしゃい。",
+   "part": 4
+  }
+ ],
+ "segments": [
+  {
+   "kind": "opening",
+   "index": null,
+   "start": 0.6,
+   "end": 15.265
+  },
+  {
+   "kind": "news",
+   "index": 0,
+   "start": 15.265,
+   "end": 32.655
+  },
+  {
+   "kind": "news",
+   "index": 1,
+   "start": 32.655,
+   "end": 50.461
+  },
+  {
+   "kind": "news",
+   "index": 2,
+   "start": 50.461,
+   "end": 69.697
+  },
+  {
+   "kind": "closing",
+   "index": null,
+   "start": 69.697,
+   "end": 86.608
+  }
+ ],
+ "made_at": "2026-11-05T23:52:38"
+}
