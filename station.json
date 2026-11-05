@@ -1,43 +1,33 @@
 {
  "format": "myradio/station-1",
- "name": "ものラジオ",
- "description": "電子工作・3Dプリンター・AI の、きのうの気になるニュースを、毎朝 90 秒で。",
- "tagline": "AI・3D 朝のニュース",
+ "name": "パオンのAI・科学・テクノロジーチャンネル",
+ "description": "AI・科学・テクノロジーの、きのうの気になるニュースを、パオンが毎朝お届けします。",
+ "tagline": "AI・科学・テクノロジーの朝ニュース",
  "logo": "logo.svg",
- "url": "https://monoradio102.github.io/myradio/",
- "repo": "https://github.com/monoradio102/myradio",
+ "url": "https://hira1010.github.io/paon-radio/",
+ "repo": "https://github.com/hira1010/paon-radio",
  "language": "ja",
  "languages": [
-  "ja",
-  "en"
+  "ja"
  ],
  "schedule": {
   "every": "day",
-  "time": "06:10",
+  "time": "07:00",
   "timezone": "Asia/Tokyo"
  },
  "episodes": "episodes.json",
  "character": {
   "pack": "character/character.json",
   "thumbnail": "character/base.png",
-  "note": "AIで生成したキャラクターです"
+  "note": "AIで生成したキャラクターです（ものラジオのキャラを借用）"
  },
  "credits": [
-  "声：COEIROINK:リリンちゃん"
+  "声：VOICEVOX:ずんだもん",
+  "キャラクター：ものラジオ（monoradio102/myradio）より借用"
  ],
  "audio": {
   "dir": "audio",
   "keep_days": 30
  },
- "weather": true,
- "i18n": {
-  "en": {
-   "name": "Mono Radio",
-   "tagline": "Morning news on AI and 3D",
-   "description": "The news worth knowing in electronics, 3D printing and AI, every morning in 90 seconds.",
-   "credits": [
-    "Voice: Kokoro (af_heart)"
-   ]
-  }
- }
+ "weather": true
 }

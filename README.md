@@ -1,13 +1,13 @@
-<h1 align="center">myradio</h1>
+<h1 align="center">パオンのAI・科学・テクノロジーチャンネル</h1>
 
-<p align="center"><b>キャラクターが毎朝ニュースを読む「放送局」を、<br>GitHub のリポジトリ 1 つで開けます。</b></p>
+<p align="center"><b>AI・科学・テクノロジーのニュースを、キャラクターが毎朝読む放送局です。</b></p>
 
 <p align="center">
-  <a href="https://monoradio102.github.io/myradio/"><img src="docs/screen.jpg" alt="ものラジオの放送画面" width="820"></a>
+  <a href="https://hira1010.github.io/paon-radio/"><img src="docs/screen.jpg" alt="放送画面" width="820"></a>
 </p>
 
 <p align="center">
-  <a href="https://monoradio102.github.io/myradio/"><img src="https://img.shields.io/badge/%E2%96%B6%20ON%20AIR-Mono%20Radio-ffd028?style=for-the-badge&labelColor=ff4468" alt="ものラジオを見る"></a>
+  <a href="https://hira1010.github.io/paon-radio/"><img src="https://img.shields.io/badge/%E2%96%B6%20ON%20AIR-Mono%20Radio-ffd028?style=for-the-badge&labelColor=ff4468" alt="ものラジオを見る"></a>
   <a href="#開局方法"><img src="https://img.shields.io/badge/open%20your-station-3fe0dc?style=for-the-badge&labelColor=161a26" alt="開局方法"></a>
 </p>
 
@@ -81,3 +81,7 @@ docs/formats.md      JSON の形
 ---
 
 **myradio** — open a station where a character reads the news every morning, with one GitHub repository. This repository is a station itself: the sample station ものラジオ (Mono Radio, AI and 3D news in Japanese and English). Use this template, change the name, the character and the voice, put your scripts in `episodes/` and publish with `tools/publish.sh`. The character in `character/` may be used freely, as is or changed, for anything that is not offensive. See [AGENTS.md](AGENTS.md) for how an AI assistant can set up a station.
+
+---
+
+この局は [monoradio102/myradio](https://github.com/monoradio102/myradio) テンプレートで開局しました。声：VOICEVOX:ずんだもん。キャラクターはものラジオより借用しています。
