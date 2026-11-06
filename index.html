@@ -700,6 +700,8 @@ function partHtml(p) {
       <ol>${ep.news.map((n, j) => `<li data-n="${String(j + 1).padStart(2, "0")}" data-seg="${newsSeg(j)}" style="animation-delay:${0.25 + j * 0.12}s">${esc(n.label)}</li>`).join("")}</ol>`;
   if (p.kind === "closing")
     return `<div class="tag">SEE YOU</div><div class="big">${tr("bye")}</div><div class="closing-title">${esc(ep.title)}</div>${pickHtml()}`;
+  if (p.kind === "diet")
+    return `<div class="tag">DIET</div><div class="big">ダイエットコーナー</div><div class="sub">${esc(ep.recipe?.name || "")}${ep.recipe?.kcal ? ` ・ 約${ep.recipe.kcal}kcal` : ""}</div>`;
   const n = ep.news[p.index];
   return `<div class="tag">NEWS ${String(p.index + 1).padStart(2, "0")} / ${String(ep.news.length).padStart(2, "0")}</div>
     <h2>${headCopy(n.label, esc(n.label))}</h2><ul>${n.points.map((x, j) =>
