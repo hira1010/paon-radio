@@ -44,7 +44,9 @@
 | `news[].link` | `{"url", "title", "site", "description", "image", "icon"}`。`image` はそのサイトが共有用に出している画像（OGP）の URL。保存はしない。開けなかったときは `status`（404 など）。出典以外の記事を使ったときは `found_by: "search"` で、元の出典は `news[].source_link` |
 | `seconds` | 声の長さ（秒） |
 | `lines_timed[]` | `{"start", "end", "show", "part"}`：文ごとの開始・終了の秒（声に合わせる） |
-| `segments[]` | `{"kind": "opening" \| "news" \| "closing", "index", "start", "end"}`：パートの区切り |
+| `segments[]` | `{"kind": "opening" \| "news" \| "diet" \| "closing", "index", "start", "end"}`：パートの区切り（`diet` はダイエットコーナー。`ep.diet` の話す文と `ep.recipe` を表示する） |
+| `diet` | （任意）ダイエットコーナーの話す文の並び（コツとレシピ紹介） |
+| `recipe` | （任意）`{"name", "kcal", "ingredients": [], "steps": []}`：今日の痩せレシピ。LINE 配信のレシピカードにも使う |
 | `audio` | （任意）声の URL。なければ `audio/<日付>.mp3` |
 | `mouth` | （任意）`{"fps": 30, "levels": "0012210…"}`：口の開き具合（0 閉じ・1 半開き・2 開き）を 1 コマ 1 文字で。ふだんは要らない（音声がこのサイトにあれば、プレーヤーが再生しながら声の大きさから作る）。音声を別のサイトに置くときに使う |
 | `made_at` | 作った時刻（音声のキャッシュ避けにも使う） |
