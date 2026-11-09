@@ -1,0 +1,10 @@
+{
+  "account": "account1",
+  "label": "Muse 1",
+  "service": "Muse",
+  "weekly_used_percent": 10,
+  "weekly_left_percent": 90,
+  "resets_at": "2026-11-16T13:37:00+09:00",
+  "resets_in_days": 7,
+  "updated_at": "2026-11-09T16:25:17+09:00"
+}
