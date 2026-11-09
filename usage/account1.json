@@ -2,9 +2,9 @@
   "account": "account1",
   "label": "パオン",
   "service": "Muse",
-  "weekly_used_percent": 25,
-  "weekly_left_percent": 75,
+  "weekly_used_percent": 42,
+  "weekly_left_percent": 58,
   "resets_at": "2026-11-16T13:37:00+09:00",
   "resets_in_days": 7,
-  "updated_at": "2026-11-09T19:50:04+09:00"
+  "updated_at": "2026-11-09T20:19:42+09:00"
 }
