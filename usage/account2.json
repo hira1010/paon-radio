@@ -2,6 +2,9 @@
   "account": "account2",
   "label": "レミ",
   "service": "Muse",
-  "status": "waiting",
-  "updated_at": "2026-11-09T16:47:27+09:00"
+  "weekly_used_percent": 26,
+  "weekly_left_percent": 74,
+  "resets_at": "2026-11-16T09:31:00+09:00",
+  "resets_in_days": 7,
+  "updated_at": "2026-11-09T17:33:45+09:00"
 }
