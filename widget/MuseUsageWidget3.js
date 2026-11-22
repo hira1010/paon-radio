@@ -1,7 +1,7 @@
-// Muse Usage Widget (3 accounts, compact) for Scriptable
+// Muse Usage Widget (3 accounts, compact v3) for Scriptable
 // パオン・レミ・懸賞、3つのClaudeアカウントの週間残量と特典（追加トークン）を
-// 1つのウィジェットに表示します。特典行は未使用（100%残り）でも常に出ます。
-// 中サイズウィジェットに3アカウント分が収まるよう縦を詰めた版です。
+// 1つのウィジェットに表示します。特典は未使用（100%残り）でも常に出ます。
+// 中サイズに確実に収まるよう、リセットと特典を1行にまとめました。
 // データは各Claudeが GitHub (hira1010/paon-radio) の usage/account*.json に
 // 公開したものを読みます。
 // Scriptableで今のスクリプトにこのコードを丸ごと貼り替えるだけでOKです。
@@ -97,16 +97,16 @@ function resetsText(data) {
 }
 
 // ---------- 特典（追加トークン） ----------
-// 未使用（0% used / 100% left）でも常に行を出すのがこの版のポイント。
-// 特典データが無いアカウントだけ行を省略します。
-function bonusInfo(data) {
+// 未使用（0% used / 100% left）でも常に表示します。
+// 特典データが無いアカウントだけ省略します。
+function bonusText(data) {
   if (!data) return null
   if (typeof data.bonus_left_percent !== "number") return null
   let oku = null
   if (typeof data.bonus_tokens_left_oku === "number") oku = data.bonus_tokens_left_oku
   else if (typeof data.bonus_tokens_left_billion === "number") oku = Math.round(data.bonus_tokens_left_billion * 10)
   if (oku === null) return null
-  return { oku: oku, left: data.bonus_left_percent }
+  return `✦特典 残り${oku}億トークン ${data.bonus_left_percent}%`
 }
 
 // ---------- ウィジェット組み立て ----------
@@ -122,7 +122,7 @@ async function buildWidget() {
 
   results.forEach((data, i) => {
     const a = ACCOUNTS[i]
-    if (i > 0) w.addSpacer(5)
+    if (i > 0) w.addSpacer(6)
 
     const row = w.addStack()
     row.centerAlignContent()
@@ -142,31 +142,24 @@ async function buildWidget() {
     if (data) {
       const left = row.addText(`${data.weekly_left_percent}% left`)
       left.textColor = Color.white()
-      left.font = Font.boldSystemFont(13)
+      left.font = Font.boldSystemFont(14)
       w.addSpacer(1)
       const bar = w.addImage(barImage(data.weekly_left_percent, a.color))
       bar.imageSize = new Size(296, 5)
-      w.addSpacer(1)
-      const sub = w.addText(resetsText(data))
-      sub.textColor = SUB
-      sub.font = Font.systemFont(8)
+      w.addSpacer(2)
 
-      const b = bonusInfo(data)
-      if (b) {
-        w.addSpacer(1)
-        const brow = w.addStack()
-        brow.centerAlignContent()
-        const spark = brow.addText("✦")
-        spark.textColor = GOLD
-        spark.font = Font.systemFont(8)
-        brow.addSpacer(3)
-        const bl = brow.addText(`特典 残り${b.oku}億トークン`)
-        bl.textColor = GOLD
-        bl.font = Font.systemFont(9)
-        brow.addSpacer()
-        const br = brow.addText(`${b.left}% left`)
-        br.textColor = GOLD
-        br.font = Font.boldSystemFont(10)
+      // リセット（左・グレー）と特典（右・金）を1行に
+      const sub = w.addStack()
+      sub.centerAlignContent()
+      const rs = sub.addText(resetsText(data))
+      rs.textColor = SUB
+      rs.font = Font.systemFont(8)
+      const bt = bonusText(data)
+      if (bt) {
+        sub.addSpacer()
+        const b = sub.addText(bt)
+        b.textColor = GOLD
+        b.font = Font.boldSystemFont(9)
       }
     } else {
       const wait = row.addText("設定待ち")
