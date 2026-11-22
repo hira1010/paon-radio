@@ -1,6 +1,7 @@
-// Muse Usage Widget (3 accounts) for Scriptable
+// Muse Usage Widget (3 accounts, compact) for Scriptable
 // パオン・レミ・懸賞、3つのClaudeアカウントの週間残量と特典（追加トークン）を
 // 1つのウィジェットに表示します。特典行は未使用（100%残り）でも常に出ます。
+// 中サイズウィジェットに3アカウント分が収まるよう縦を詰めた版です。
 // データは各Claudeが GitHub (hira1010/paon-radio) の usage/account*.json に
 // 公開したものを読みます。
 // Scriptableで今のスクリプトにこのコードを丸ごと貼り替えるだけでOKです。
@@ -60,7 +61,7 @@ async function fetchAccount(a, cache) {
 
 // ---------- バー画像 ----------
 function barImage(percent, color) {
-  const w = 220, h = 7
+  const w = 296, h = 5
   const ctx = new DrawContext()
   ctx.size = new Size(w, h)
   ctx.opaque = false
@@ -92,7 +93,7 @@ function resetsText(data) {
   if (!data || !data.resets_at) return ""
   const ms = new Date(data.resets_at).getTime() - Date.now()
   const days = Math.max(0, Math.ceil(ms / 86400000))
-  return `Resets in ${days}日 ・ ${fmtDate(data.resets_at)}`
+  return `Resets in ${days}日・${fmtDate(data.resets_at)}`
 }
 
 // ---------- 特典（追加トークン） ----------
@@ -117,64 +118,64 @@ async function buildWidget() {
 
   const w = new ListWidget()
   w.backgroundColor = BG
-  w.setPadding(12, 16, 10, 16)
+  w.setPadding(8, 14, 6, 14)
 
   results.forEach((data, i) => {
     const a = ACCOUNTS[i]
-    if (i > 0) w.addSpacer(10)
+    if (i > 0) w.addSpacer(5)
 
     const row = w.addStack()
     row.centerAlignContent()
     const dot = row.addText("●")
     dot.textColor = a.color
-    dot.font = Font.systemFont(8)
-    row.addSpacer(5)
+    dot.font = Font.systemFont(7)
+    row.addSpacer(4)
     const name = row.addText(a.name)
     name.textColor = Color.white()
-    name.font = Font.semiboldSystemFont(12)
-    row.addSpacer(6)
+    name.font = Font.semiboldSystemFont(11)
+    row.addSpacer(5)
     const weekly = row.addText("Weekly")
     weekly.textColor = SUB
-    weekly.font = Font.systemFont(10)
+    weekly.font = Font.systemFont(9)
     row.addSpacer()
 
     if (data) {
       const left = row.addText(`${data.weekly_left_percent}% left`)
       left.textColor = Color.white()
-      left.font = Font.boldSystemFont(16)
-      w.addSpacer(4)
+      left.font = Font.boldSystemFont(13)
+      w.addSpacer(1)
       const bar = w.addImage(barImage(data.weekly_left_percent, a.color))
-      bar.imageSize = new Size(220, 7)
-      w.addSpacer(3)
+      bar.imageSize = new Size(296, 5)
+      w.addSpacer(1)
       const sub = w.addText(resetsText(data))
       sub.textColor = SUB
-      sub.font = Font.systemFont(9)
+      sub.font = Font.systemFont(8)
 
       const b = bonusInfo(data)
       if (b) {
-        w.addSpacer(3)
+        w.addSpacer(1)
         const brow = w.addStack()
         brow.centerAlignContent()
         const spark = brow.addText("✦")
         spark.textColor = GOLD
-        spark.font = Font.systemFont(9)
-        brow.addSpacer(4)
+        spark.font = Font.systemFont(8)
+        brow.addSpacer(3)
         const bl = brow.addText(`特典 残り${b.oku}億トークン`)
         bl.textColor = GOLD
-        bl.font = Font.systemFont(10)
+        bl.font = Font.systemFont(9)
         brow.addSpacer()
         const br = brow.addText(`${b.left}% left`)
         br.textColor = GOLD
-        br.font = Font.boldSystemFont(11)
+        br.font = Font.boldSystemFont(10)
       }
     } else {
       const wait = row.addText("設定待ち")
       wait.textColor = SUB
-      wait.font = Font.semiboldSystemFont(12)
-      w.addSpacer(3)
+      wait.font = Font.semiboldSystemFont(11)
+      w.addSpacer(2)
       const sub = w.addText(`${a.name}側のClaudeで公開設定が必要です`)
       sub.textColor = SUB
-      sub.font = Font.systemFont(9)
+      sub.font = Font.systemFont(8)
     }
   })
 
